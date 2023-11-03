@@ -25,35 +25,63 @@
         text-decoration: none;
         list-style: none;
       }
+      :root {
+        --cyan-color: hsl(179, 62%, 43%);
+        --bright-yellow: hsl(71, 73%, 54%);
+
+        --light-gray: hsl(204, 43%, 93%);
+        --grayish-blue: hsl(218, 22%, 67%);
+      }
+
       body {
-        font-family: "Karls", sans-serif;
+        background-color: var(--light-gray);
+        font-family: "Karla", sans-serif;
         display: grid;
+
         place-items: center;
         min-height: 100vh;
       }
       main {
-        max-width: 900px;
+        width: 600px;
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 40% 60%;
       }
       .introduction {
-        padding: 22px 19px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        width: 100%;
+        background-color: white;
+        padding: 32px 29px;
         grid-column-start: 1;
         grid-column-end: 3;
       }
       h1 {
+        color: var(--cyan-color);
         margin-bottom: 20px;
         font-size: 25px;
       }
+      .intro_para {
+        font-size: 15px;
+        line-height: 20px;
+        color: var(--grayish-blue);
+      }
       /* h4 is for both 'why us and 30 day hassle' */
       h4 {
-        font-size: 18px;
+        font-size: 16px;
         margin-bottom: 14px;
       }
 
+      .subheading {
+        color: var(--bright-yellow);
+        font-size: 16px;
+      }
+
       .subscribtion_container {
-        padding: 22px 19px;
+        border-bottom-left-radius: 10px;
+        color: white;
+        background-color: var(--cyan-color);
+        padding: 50px 35px;
       }
       .price_container {
         display: flex;
@@ -64,22 +92,36 @@
         font-weight: 700;
         font-size: 34px;
       }
+
+      .per_month {
+        opacity: 0.5;
+      }
       .subscribtion_para {
         font-size: 15px;
         margin-bottom: 25px;
+        opacity: 0.8;
       }
       button {
+        letter-spacing: 1px;
+        font-weight: 700;
+        color: white;
+        background-color: var(--bright-yellow);
         width: 100%;
         padding: 12px 0;
         border: none;
         border-radius: 8px;
       }
       .why_us_container {
-        padding: 22px 19px;
+        border-bottom-right-radius: 10px;
+        background-color: var(--cyan-color);
+        opacity: 0.93;
+        color: white;
+        padding: 32px 29px;
       }
       ul li p {
-        font-size: 12px;
-        margin-bottom: 2px;
+        font-size: 14px;
+        margin-bottom: 3px;
+        opacity: 0.6;
       }
       footer {
         position: absolute;
@@ -98,7 +140,7 @@
     <main>
       <section class="introduction">
         <h1>Join our community</h1>
-        <h4>30-day, hassle-free money back guarantee</h4>
+        <h4 class="subheading">30-day, hassle-free money back guarantee</h4>
         <p class="intro_para">
           Gain access to our full library of tutorials along with expert code
           reviews. <br />Perfect for any developers who are serious about honing
