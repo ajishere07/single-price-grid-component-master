@@ -16,6 +16,8 @@
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
       * {
         margin: 0;
         padding: 0;
@@ -24,6 +26,7 @@
         list-style: none;
       }
       body {
+        font-family: "Karls", sans-serif;
         display: grid;
         place-items: center;
         min-height: 100vh;
@@ -35,8 +38,48 @@
         grid-template-rows: 40% 60%;
       }
       .introduction {
+        padding: 22px 19px;
         grid-column-start: 1;
         grid-column-end: 3;
+      }
+      h1 {
+        margin-bottom: 20px;
+        font-size: 25px;
+      }
+      /* h4 is for both 'why us and 30 day hassle' */
+      h4 {
+        font-size: 18px;
+        margin-bottom: 14px;
+      }
+
+      .subscribtion_container {
+        padding: 22px 19px;
+      }
+      .price_container {
+        display: flex;
+        align-items: center;
+      }
+      .price {
+        margin-right: 18px;
+        font-weight: 700;
+        font-size: 34px;
+      }
+      .subscribtion_para {
+        font-size: 15px;
+        margin-bottom: 25px;
+      }
+      button {
+        width: 100%;
+        padding: 12px 0;
+        border: none;
+        border-radius: 8px;
+      }
+      .why_us_container {
+        padding: 22px 19px;
+      }
+      ul li p {
+        font-size: 12px;
+        margin-bottom: 2px;
       }
       footer {
         position: absolute;
@@ -56,7 +99,7 @@
       <section class="introduction">
         <h1>Join our community</h1>
         <h4>30-day, hassle-free money back guarantee</h4>
-        <p>
+        <p class="intro_para">
           Gain access to our full library of tutorials along with expert code
           reviews. <br />Perfect for any developers who are serious about honing
           their skills.
@@ -64,22 +107,25 @@
       </section>
       <section class="subscribtion_container">
         <h4>Monthly Subscription</h4>
-        <p>
-          <span>&dollar;29</span>per month Full access for less than &dollar;1 a
-          day
+        <p class="price_container">
+          <span class="price">&dollar;29</span
+          ><span class="per_month">per month</span>
+        </p>
+        <p class="subscribtion_para">
+          Full access for less than &dollar;1 a day
         </p>
         <button>Sign Up</button>
       </section>
       <section class="why_us_container">
         <h4>Why Us</h4>
         <ul>
-          <li>Tutorials by industry experts</li>
-          <li>Peer &amp; expert code review</li>
-          <li>Coding exercises</li>
-          <li>Access to our GitHub repos</li>
-          <li>Community forum</li>
-          <li>Flashcard decks</li>
-          <li>New videos every week</li>
+          <li><p class="why_us_para">Tutorials by industry experts</p></li>
+          <li><p class="why_us_para">Peer &amp; expert code review</p></li>
+          <li><p class="why_us_para">Coding exercises</p></li>
+          <li><p class="why_us_para">Access to our GitHub repos</p></li>
+          <li><p class="why_us_para">Community forum</p></li>
+          <li><p class="why_us_para">Flashcard decks</p></li>
+          <li><p class="why_us_para">New videos every week</p></li>
         </ul>
       </section>
     </main>
